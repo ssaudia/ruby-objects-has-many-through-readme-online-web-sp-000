@@ -30,7 +30,7 @@ class Customer
     end
   end
 
-  # Initializes a meal using the current Customer instance, 
+  # Initializes a meal using the current Customer instance,
     # a provided Waiter instance and a total and tip
   def new_meal(waiter, total, tip=0)
     Meal.new(waiter, self, total, tip)
@@ -43,7 +43,7 @@ class Customer
 
   def self.oldest_customer # Class method to find the odlest customer
     oldest_age = 0
-    oldest_customer = nil #not assigned yet 
+    oldest_customer = nil #not assigned yet
     self.all.each do |customer|
       if customer.age > oldest_age
         oldest_age = customer.age
